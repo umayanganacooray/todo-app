@@ -8,8 +8,12 @@ router.get("/add-todo",todo.addTodoFormController);
  
 router.get("/update-todo",todo.updateTodoFormController);
 
-router.get("/delete-todo",todo.deleteTodoFormController);
+router.get("/delete-todo",todo.deleteTodoPageController);
 
 router.post("/add-todo", todo.addTodoController);
 
-module.exports = router;
+router.post("/update-todo/:id", todo.updateTodoController);
+
+router.get("/confirm-delete", todo.deleteTodoController);
+
+module.exports = router; 
